@@ -113,7 +113,7 @@ for (let row = 0; row < 5; row++) {
     const x =-originalZ-1.3;
     const z = -originalX-1.5;
 
-    createPoolBall(`textures/${ballTextures[currentBall]}`, x, z);
+    createPoolBall(`./textures/${ballTextures[currentBall]}`, x, z);
     currentBall++;
   }
 }
