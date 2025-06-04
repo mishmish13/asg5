@@ -21,12 +21,12 @@ const scene = new THREE.Scene();
 // skybox
 const cubeLoader = new THREE.CubeTextureLoader();
 scene.background = cubeLoader.load([
-  'textures/pos-x.jpg',
-  'textures/neg-x.jpg',
-  'textures/pos-y.jpg',
-  'textures/neg-y.jpg',
-  'textures/pos-z.jpg',
-  'textures/neg-z.jpg',
+  './textures/pos-x.jpg',
+  './textures/neg-x.jpg',
+  './textures/pos-y.jpg',
+  './textures/neg-y.jpg',
+  './textures/pos-z.jpg',
+  './textures/neg-z.jpg',
 ]);
 
 // lights
@@ -54,7 +54,7 @@ loadManager.onProgress = (url, loaded, total) => {
 const textureLoader = new THREE.TextureLoader(loadManager);
 
 // pool table
-const tableTex = textureLoader.load('textures/pool_table_felt.jpg');
+const tableTex = textureLoader.load('./textures/pool_table_felt.jpg');
 tableTex.colorSpace = THREE.SRGBColorSpace;
 
 const poolTable = new THREE.Mesh(
@@ -129,7 +129,7 @@ cue.position.set(5, -0.5, 0);
 scene.add(cue);
 
 // chalk cube
-const chalkTex = textureLoader.load('textures/chalk.jpg');
+const chalkTex = textureLoader.load('./textures/chalk.jpg');
 chalkTex.colorSpace = THREE.SRGBColorSpace;
 const chalk = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.5, 0.5),
@@ -141,7 +141,7 @@ scene.add(chalk);
 // fly model
 const gltfLoader = new GLTFLoader(loadManager);
 gltfLoader.load(
-  'models/Fly.glb',
+  './models/Fly.glb',
   (gltf) => {
     const fly = gltf.scene;
     fly.scale.set(0.5, 0.5, 0.5);
