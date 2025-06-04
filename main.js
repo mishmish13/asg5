@@ -141,7 +141,7 @@ scene.add(chalk);
 // fly model
 const gltfLoader = new GLTFLoader(loadManager);
 gltfLoader.load(
-  '../models/Fly.glb',
+  'models/Fly.glb',
   (gltf) => {
     const fly = gltf.scene;
     fly.scale.set(0.5, 0.5, 0.5);
